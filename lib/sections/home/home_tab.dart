@@ -45,79 +45,81 @@ class HomeTab extends StatelessWidget {
               0,
               0,
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      'WELCOME TO MY PORTFOLIO! ',
-                      style: AppText.b2!.copyWith(
-                        fontFamily: 'Montserrat',
-                      ),
-                    ),
-                    EntranceFader(
-                      offset: const Offset(0, 0),
-                      delay: const Duration(seconds: 2),
-                      duration: const Duration(milliseconds: 800),
-                      child: Image.asset(
-                        StaticUtils.hi,
-                        height: AppDimensions.normalize(12),
-                      ),
-                    ),
-                  ],
-                ),
-                Space.y1!,
-                Text(
-                  "Muhammad",
-                  style: AppText.h1!.copyWith(
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.w100,
-                  ),
-                ),
-                Text(
-                  "Ibrahim Khan",
-                  style: AppText.h1b!.copyWith(
-                    height: 1,
-                  ),
-                ),
-                EntranceFader(
-                  offset: const Offset(-10, 0),
-                  delay: const Duration(seconds: 1),
-                  duration: const Duration(milliseconds: 800),
-                  child: Row(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(
-                        Icons.play_arrow_rounded,
-                        color: AppTheme.c!.primary!,
+                      Text(
+                        'WELCOME TO MY PORTFOLIO! ',
+                        style: AppText.b2!.copyWith(
+                          fontFamily: 'Montserrat',
+                        ),
                       ),
-                      AnimatedTextKit(
-                        animatedTexts: [
-                          TyperAnimatedText(
-                            ' Flutter Developer',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: AppText.b1,
-                          ),
-                          TyperAnimatedText(
-                            ' UI/UX Enthusiast',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: AppText.b1,
-                          ),
-                          TyperAnimatedText(
-                            ' A friend :)',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: AppText.b1,
-                          ),
-                        ],
-                        isRepeatingAnimation: true,
+                      EntranceFader(
+                        offset: const Offset(0, 0),
+                        delay: const Duration(seconds: 2),
+                        duration: const Duration(milliseconds: 800),
+                        child: Image.asset(
+                          StaticUtils.hi,
+                          height: AppDimensions.normalize(12),
+                        ),
                       ),
                     ],
                   ),
-                ),
-                Space.y2!,
-                const SocialLinks(),
-              ],
+                  Space.y1!,
+                  Text(
+                    "Muhammad",
+                    style: AppText.h1!.copyWith(
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w100,
+                    ),
+                  ),
+                  Text(
+                    "Ibrahim Khan",
+                    style: AppText.h1b!.copyWith(
+                      height: 1,
+                    ),
+                  ),
+                  EntranceFader(
+                    offset: const Offset(-10, 0),
+                    delay: const Duration(seconds: 1),
+                    duration: const Duration(milliseconds: 800),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.play_arrow_rounded,
+                          color: AppTheme.c!.primary!,
+                        ),
+                        AnimatedTextKit(
+                          animatedTexts: [
+                            TyperAnimatedText(
+                              ' Flutter Developer',
+                              speed: const Duration(milliseconds: 50),
+                              textStyle: AppText.b1,
+                            ),
+                            TyperAnimatedText(
+                              ' UI/UX Enthusiast',
+                              speed: const Duration(milliseconds: 50),
+                              textStyle: AppText.b1,
+                            ),
+                            TyperAnimatedText(
+                              ' A friend :)',
+                              speed: const Duration(milliseconds: 50),
+                              textStyle: AppText.b1,
+                            ),
+                          ],
+                          isRepeatingAnimation: true,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Space.y2!,
+                  const SocialLinks(),
+                ],
+              ),
             ),
           ),
         ],

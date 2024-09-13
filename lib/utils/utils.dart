@@ -41,6 +41,8 @@ class StaticUtils {
     // "https://img.icons8.com/ios-filled/500/ffffff/medium-monogram--v1.png"
   ];
 
+  // hhhh
+
   static const List<String> socialLinks = [
     "https://www.facebook.com/profile.php?id=100048071862108",
     "https://www.instagram.com/king_______khan_13/",
@@ -51,7 +53,7 @@ class StaticUtils {
   ];
 
   static const String resume =
-      'https://drive.google.com/file/d/1bDNNrkQtNVJbXcdwMSx0crQQvAF_nMwV/view?usp=sharing';
+      'https://docs.google.com/document/d/1LmoVXuMs8RT83CkuesBbFyIXJcg3z_YM/edit?usp=sharing&ouid=112003980476981077484&rtpof=true&sd=true';
 
   static const String gitHub = "https://github.com/ibrahim-khan-flutterdev";
 }

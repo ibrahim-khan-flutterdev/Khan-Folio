@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
+import '../../animations/background_animation/view/animation_view.dart';
 import '../../configs/app_dimensions.dart';
 import '../../configs/app_theme.dart';
 import '../../configs/app_typography.dart';
@@ -16,7 +17,7 @@ class HomeMobile extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return SizedBox(
-      height: size.height * 1.02,
+      height: size.height * 0.8,
       child: Stack(
         children: [
           Positioned(
@@ -39,6 +40,7 @@ class HomeMobile extends StatelessWidget {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Row(
                   mainAxisSize: MainAxisSize.min,
@@ -56,22 +58,13 @@ class HomeMobile extends StatelessWidget {
                     ),
                   ],
                 ),
-                Space.y!,
-                Text(
-                  "Muhammad",
-                  style: AppText.h3!.copyWith(
-                    fontFamily: 'Montserrat',
-                    fontSize: AppDimensions.normalize(14),
-                    fontWeight: FontWeight.w200,
-                  ),
-                ),
-                Text(
-                  "Ibrahim Khan",
-                  style: AppText.h3b!.copyWith(
-                    height: 1,
-                  ),
-                ),
-                Space.y!,
+
+                SizedBox(
+                    height: 140,
+                    width: 400,
+                    child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: RocketAnimationScreen())),
                 Row(
                   children: [
                     Icon(

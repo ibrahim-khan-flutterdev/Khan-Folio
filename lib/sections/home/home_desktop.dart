@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
+import '../../animations/background_animation/view/animation_view.dart';
 import '../../animations/entrance_fader.dart';
 import '../../configs/app_dimensions.dart';
 import '../../configs/app_theme.dart';
@@ -70,22 +71,29 @@ class HomeDesktop extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Space.y1!,
-                  Text(
-                    "Muhammad",
-                    style: AppText.h1!.copyWith(
-                      fontFamily: 'Montserrat',
-                      fontSize: AppDimensions.normalize(23),
-                      fontWeight: FontWeight.w100,
-                    ),
-                  ),
-                  Text(
-                    "Ibrahim Khan",
-                    style: AppText.h1b!.copyWith(
-                      fontSize: AppDimensions.normalize(25),
-                      height: 1,
-                    ),
-                  ),
+
+                  // Text(
+                  //   "Muhammad",
+                  //   style: AppText.h1!.copyWith(
+                  //     fontFamily: 'Montserrat',
+                  //     fontSize: AppDimensions.normalize(23),
+                  //     fontWeight: FontWeight.w100,
+                  //   ),
+                  // ),
+                  SizedBox(
+                      height: 150,
+                      width: 400,
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: RocketAnimationScreen())),
+                  // Text(
+                  //   "Ibrahim Khan",
+                  //   style: AppText.h1b!.copyWith(
+                  //     fontSize: AppDimensions.normalize(25),
+                  //     height: 1,
+                  //   ),
+                  // ),
+
                   EntranceFader(
                     offset: const Offset(-10, 0),
                     delay: const Duration(seconds: 1),
@@ -119,7 +127,7 @@ class HomeDesktop extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // Space.y2!,
+                  Space.y2!,
                   const SocialLinks(),
                 ],
               ),

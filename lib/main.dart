@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
 
+import 'animations/background_animation/vm/animation_vm.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   setPathUrlStrategy();
@@ -28,6 +30,7 @@ class MyAppState extends State<MyApp> {
         ChangeNotifierProvider(create: (_) => AppProvider()),
         ChangeNotifierProvider(create: (_) => DrawerProvider()),
         ChangeNotifierProvider(create: (_) => ScrollProvider()),
+        ChangeNotifierProvider(create: (_) => MyAnimation()),
       ],
       child: Consumer<AppProvider>(
         builder: (context, value, _) => MaterialChild(

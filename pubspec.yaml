@@ -55,7 +55,10 @@ dependencies:
   provider: ^6.1.2
   # cache
   shared_preferences: ^2.3.2
-
+#  flutter animation
+  flutter_animate: ^4.0.1
+#  flutter animation use json data
+  lottie: ^3.1.2
 
 
 
@@ -89,6 +92,7 @@ flutter:
     - assets/photos/
     - assets/services/
     - assets/projects/
+    - assets/animation/firework.json
 
 
 
