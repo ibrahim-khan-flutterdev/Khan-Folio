@@ -39,7 +39,7 @@ class MyAppState extends State<MyApp> {
         ChangeNotifierProvider(create: (_) => AppProvider()),
         ChangeNotifierProvider(create: (_) => DrawerProvider()),
         ChangeNotifierProvider(create: (_) => ScrollProvider()),
-        ChangeNotifierProvider(create: (_) => MyAnimation()),
+        // ChangeNotifierProvider(create: (_) => MyAnimation()),
       ],
       child: Consumer<AppProvider>(
         builder: (context, value, _) => MaterialChild(
