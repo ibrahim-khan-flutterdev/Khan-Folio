@@ -11,6 +11,7 @@ import 'package:url_strategy/url_strategy.dart';
 import 'animations/background_animation/vm/animation_vm.dart';
 import 'firebase_options.dart';
 
+
 Future<void> main()async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

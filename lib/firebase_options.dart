@@ -54,11 +54,12 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyCBMsFFtY-enBPLPOEmr9_R6GwZQ5h-Xjg',
-    appId: '1:635906388584:web:44a2cdf0a44fbacd7441dd',
+    appId: '1:635906388584:web:59892624be8e81507441dd',
     messagingSenderId: '635906388584',
     projectId: 'khan-portfolio-1362f',
     authDomain: 'khan-portfolio-1362f.firebaseapp.com',
     storageBucket: 'khan-portfolio-1362f.appspot.com',
-    measurementId: 'G-FLNB1W4QDF',
+    measurementId: 'G-NGT7G6G66M',
   );
+
 }

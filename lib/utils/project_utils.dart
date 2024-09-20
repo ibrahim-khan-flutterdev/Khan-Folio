@@ -42,6 +42,6 @@ class ProjectUtils {
     "https://github.com/ibrahim-khan-flutterdev/covid_19",
     "https://github.com/ibrahim-khan-flutterdev/responsive",
     "https://github.com/ibrahim-khan-flutterdev/Khan-Folio",
-"    https://github.com/ibrahim-khan-flutterdev/rocket_animation",
+    "https://github.com/ibrahim-khan-flutterdev/rocket_animation",
   ];
 }
