@@ -53,6 +53,7 @@ class AppDimensions {
     final x = UI.width! / UI.height!;
     final ps = ui.window.physicalSize;
     return """
+   
       Width: ${UI.width} | ${ps.width}
       Height: ${UI.height} | ${ps.height}
       app_ratio: $ratio

@@ -10,12 +10,12 @@ class MyAnimation with ChangeNotifier {
   bool isLoading = false;
   init(TickerProvider vsync) {
     rocketController = AnimationController(
-      duration: Duration(seconds: 3),
+      duration: const Duration(seconds: 3),
       vsync: vsync,
     );
 
     textController = AnimationController(
-      duration: Duration(seconds: 13),
+      duration: const Duration(seconds: 13),
       vsync: vsync,
     );
 
@@ -36,28 +36,22 @@ class MyAnimation with ChangeNotifier {
       textController.forward();
 
       // Show text after the blast completes and turn off the blast effect
-      Future.delayed(Duration(seconds: 8), () {
+      Future.delayed(const Duration(seconds: 8), () {
         showText = true;
         showBlast = false;
         notifyListeners();
 
         // Reset and start the loop again after 1 minute
-        Future.delayed(Duration(minutes: 1), () {
+        Future.delayed(const Duration(minutes: 1), () {
           showText = false;
-
           rocketController.reset();
           textController.reset();
           startAnimationLoop();
           notifyListeners();
-        });
+        }
+        );
       });
     });
   }
-
-  @override
-  void dispose() {
-    rocketController.dispose();
-    textController.dispose();
-    super.dispose();
-  }
 }
+

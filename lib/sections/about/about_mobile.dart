@@ -16,7 +16,7 @@ import '../../widget/custom_text_heading.dart';
 import '../../widget/tech_widget.dart';
 
 class AboutMobile extends StatelessWidget {
-  const AboutMobile({Key? key}) : super(key: key);
+  const AboutMobile({super.key});
 
   @override
   Widget build(BuildContext context) {

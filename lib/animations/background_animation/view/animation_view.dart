@@ -22,8 +22,18 @@ class _RocketAnimationScreenState extends State<RocketAnimationScreen>
       final animationProvider =
           Provider.of<MyAnimation>(context, listen: false);
       animationProvider.init(this);
+
     });
   }
+  @override
+  void dispose() {
+    context.read<MyAnimation>().rocketController.dispose();
+    context.read<MyAnimation>().textController.dispose();
+    super.dispose();
+  }
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -42,12 +52,12 @@ class _RocketAnimationScreenState extends State<RocketAnimationScreen>
                 opacity: myAnimation.textAnimation,
                 child: SlideTransition(
                   position: myAnimation.textAnimation.drive(Tween<Offset>(
-                    begin: Offset(0, 1),
-                    end: Offset(0, 0),
+                    begin: const Offset(0, 1),
+                    end: const Offset(0, 0),
                   )),
                   child: Responsive.isDesktop(context)
-                      ? VisualView()
-                      : VisualView(),
+                      ? const VisualView()
+                      : const VisualView(),
                 ),
               ),
           ],

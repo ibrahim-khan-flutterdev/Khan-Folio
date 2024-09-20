@@ -8,7 +8,7 @@ import '../provider/app_provider.dart';
 import '../provider/scroll_provider.dart';
 
 class ArrowOnTop extends StatefulWidget {
-  const ArrowOnTop({Key? key}) : super(key: key);
+  const ArrowOnTop({super.key});
 
   @override
   ArrowOnTopState createState() => ArrowOnTopState();

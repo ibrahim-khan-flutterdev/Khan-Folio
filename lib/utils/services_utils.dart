@@ -22,6 +22,6 @@ class ServicesUtils {
     "Modern UI/UX Designing\n- Adobe XD\n- Mobile & Web designs\n- Interactive UI designs\n- Responsiveness\n- Promo Videos and more..!",
     "Rapid Prototype via Flutter\n- Working MVP\n- Quick & Working prototype",
     "Technical Blog writing\n- Medium blogs\n- Soothing header images\n- SEO friendly\n- Researched topics and more..!",
-    "Open source GitHub Project\n- Awesome README.md\n- Well documented\n- Header images and more...!",
+    "Open source GitHub Projects\n- Awesome README.md\n- Well documented\n- Header images and more...!",
   ];
 }

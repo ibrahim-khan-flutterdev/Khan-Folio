@@ -3,20 +3,28 @@ import 'package:dev_portfolio/provider/app_provider.dart';
 import 'package:dev_portfolio/provider/drawer_provider.dart';
 import 'package:dev_portfolio/provider/scroll_provider.dart';
 import 'package:dev_portfolio/sections/main/main_section.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
-
 import 'animations/background_animation/vm/animation_vm.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main()async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   WidgetsFlutterBinding.ensureInitialized();
   setPathUrlStrategy();
   runApp(const MyApp());
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   MyAppState createState() => MyAppState();

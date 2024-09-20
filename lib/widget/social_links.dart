@@ -11,8 +11,8 @@ import '../utils/utils.dart';
 
 class SocialLinks extends StatelessWidget {
   const SocialLinks({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     final appProvider = Provider.of<AppProvider>(context);
@@ -25,20 +25,17 @@ class SocialLinks extends StatelessWidget {
           .map(
             (e) => Padding(
               padding:
-                  Responsive.isMobile(context) ? Space.all(0.2, 0) : Space.h!,
+                  Responsive.isMobile(context) ? Space.all(0.2, 0) : Space.all(0.2, 0),
               child: IconButton(
                 highlightColor: Colors.white54,
                 splashRadius: AppDimensions.normalize(12),
                 icon: Image.network(
                   e.value,
+
                   color: appProvider.isDark ? Colors.white : Colors.black,
-                  height: Responsive.isMobile(context)
-                      ? AppDimensions.normalize(10)
-                      : null,
+                  height:AppDimensions.normalize(10),
                 ),
-                iconSize: Responsive.isMobile(context)
-                    ? AppDimensions.normalize(10)
-                    : AppDimensions.normalize(15),
+                iconSize:AppDimensions.normalize(10),
                 onPressed: () => openURL(
                   StaticUtils.socialLinks[e.key],
                 ),

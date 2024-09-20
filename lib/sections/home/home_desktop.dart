@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-import '../../animations/background_animation/view/animation_view.dart';
+
 import '../../animations/entrance_fader.dart';
 import '../../configs/app_dimensions.dart';
 import '../../configs/app_theme.dart';
@@ -85,14 +85,19 @@ class HomeDesktop extends StatelessWidget {
                       width: 400,
                       child: Align(
                           alignment: Alignment.centerLeft,
-                          child: RocketAnimationScreen())),
-                  // Text(
-                  //   "Ibrahim Khan",
-                  //   style: AppText.h1b!.copyWith(
-                  //     fontSize: AppDimensions.normalize(25),
-                  //     height: 1,
-                  //   ),
-                  // ),
+                          child:
+
+                          // RocketAnimationScreen()
+
+                        Text(
+                          "Ibrahim Khan",
+                          style: AppText.h1b!.copyWith(
+                            fontSize: AppDimensions.normalize(25),
+                            height: 1,
+                          ),
+                        ),
+                      )),
+
 
                   EntranceFader(
                     offset: const Offset(-10, 0),
@@ -127,7 +132,7 @@ class HomeDesktop extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Space.y2!,
+
                   const SocialLinks(),
                 ],
               ),

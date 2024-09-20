@@ -41,7 +41,7 @@ class StaticUtils {
     // "https://img.icons8.com/ios-filled/500/ffffff/medium-monogram--v1.png"
   ];
 
-  // hhhh
+
 
   static const List<String> socialLinks = [
     "https://www.facebook.com/profile.php?id=100048071862108",

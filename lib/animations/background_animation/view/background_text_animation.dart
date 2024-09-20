@@ -6,7 +6,7 @@ import '../../../configs/app_typography.dart';
 import '../../../responsive/responsive.dart';
 
 class VisualView extends StatelessWidget {
-  const VisualView({Key? key}) : super(key: key);
+  const VisualView({super.key});
 
   @override
   Widget build(BuildContext context) {

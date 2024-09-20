@@ -1,7 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-import '../../animations/background_animation/view/animation_view.dart';
 import '../../configs/app_dimensions.dart';
 import '../../configs/app_theme.dart';
 import '../../configs/app_typography.dart';
@@ -59,12 +58,18 @@ class HomeMobile extends StatelessWidget {
                   ],
                 ),
 
-                SizedBox(
+                 SizedBox(
                     height: 140,
                     width: 400,
                     child: Align(
                         alignment: Alignment.centerLeft,
-                        child: RocketAnimationScreen())),
+                        child: Text(
+                          "Ibrahim Khan",
+                          style: AppText.h1b!.copyWith(
+                            fontSize: AppDimensions.normalize(25),
+                            height: 1,
+                          ),
+                        ),)),
                 Row(
                   children: [
                     Icon(

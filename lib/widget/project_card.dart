@@ -17,14 +17,14 @@ class ProjectCard extends StatefulWidget {
   final IconData? projectIconData;
 
   const ProjectCard({
-    Key? key,
+    super.key,
     this.banner,
     this.projectIcon,
     this.projectLink,
     this.projectIconData,
     required this.projectTitle,
     required this.projectDescription,
-  }) : super(key: key);
+  });
   @override
   ProjectCardState createState() => ProjectCardState();
 }
@@ -62,7 +62,7 @@ class ProjectCardState extends State<ProjectCard> {
       child: Container(
         margin: Space.h,
         padding: Space.all(),
-        width: AppDimensions.normalize(150),
+        width: AppDimensions.normalize(140),
         height: AppDimensions.normalize(90),
         decoration: BoxDecoration(
           color: appProvider.isDark ? Colors.grey[900] : Colors.white,
@@ -95,6 +95,7 @@ class ProjectCardState extends State<ProjectCard> {
                           ? Image.asset(
                               widget.projectIcon!,
                               height: height * 0.05,
+                    fit: BoxFit.cover,
                             )
                           : Row(
                               mainAxisSize: MainAxisSize.min,
@@ -102,7 +103,9 @@ class ProjectCardState extends State<ProjectCard> {
                                 Image.asset(
                                   widget.projectIcon!,
                                   height: height * 0.03,
+                                  fit: BoxFit.cover,
                                 ),
+
                                 SizedBox(
                                   width: width * 0.01,
                                 ),
@@ -154,6 +157,7 @@ class ProjectCardState extends State<ProjectCard> {
                 child: widget.banner != null
                     ? Image.asset(
                         widget.banner!,
+                  fit: BoxFit.cover,
                       )
                     : Container(),
               ),
